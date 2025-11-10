@@ -142,6 +142,108 @@
             50% { opacity: 1; }
             100% { transform: scale(15); opacity: 0; }
         }
+
+        /* ----- NEW CAKE STYLES ----- */
+        .cake-container {
+            position: relative;
+            width: 300px;
+            height: 250px;
+        }
+        .cake-top {
+            position: absolute;
+            bottom: 100px;
+            left: 50px;
+            width: 200px;
+            height: 60px;
+            background: #5D3A1A; /* Chocolate */
+            border-radius: 50% / 30px;
+            border: 3px solid #3E2711;
+        }
+        .cake-middle {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 200px;
+            height: 50px;
+            background: #8B4513; /* Lighter Chocolate */
+            border-left: 3px solid #3E2711;
+            border-right: 3px solid #3E2711;
+        }
+        .cake-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 25px;
+            width: 250px;
+            height: 50px;
+            background: #5D3A1A;
+            border-radius: 50% / 25px;
+            border: 3px solid #3E2711;
+        }
+        .candles-container {
+            position: absolute;
+            bottom: 155px;
+            left: 85px;
+            width: 130px;
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .candle {
+            width: 10px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+        }
+        .flame {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 15px;
+            background: #FFC107;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow: 0 0 10px #FFC107, 0 0 20px #FFC107;
+            animation: flicker 0.5s ease-in-out infinite alternate;
+            transition: opacity 0.3s ease-out;
+        }
+        @keyframes flicker {
+            from { transform: translateX(-50%) scale(1, 1); }
+            to { transform: translateX(-50%) scale(0.9, 1.1); }
+        }
+        
+        .cake-slice {
+            display: none;
+            position: absolute;
+            bottom: 100px;
+            left: 175px;
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 60px solid #D2691E; /* Slice color */
+            transform: rotate(45deg);
+        }
+
+        .cake-message {
+            display: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            color: #f472b6;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            margin-top: 1.5rem;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* ----- END CAKE STYLES ----- */
+
     </style>
 </head>
 <body>
@@ -160,12 +262,12 @@
                 <h2 class="font-title text-3xl sm:text-4xl font-bold mb-6 text-gray-800 text-center">Saanu my darling, HAPPY BIRTHDAY!</h2>
                 <div class="letter-content text-gray-700">
                     <p>I hope you have a wonderful year ahead, full of joy and laughter. You have made my life so much more worthwhile and fun, simply because you exist in it.</p>
-                    <p>The way you're so caring and worry about me, even if it's the smallest scratch or cut I can't emphasise how happy I have been over the last 5 months because of you.</p>
-                    <p>I wake up wanting to talk to you, see your face, and spend time with you. I go to bed seeing your face as the last thing and feel very sad I can't talk to you any longer. The last couple of months have been the most joyful days of my life, I am not exaggerating this you donkey.</p>
-                    <p>I am so, so, so sorry for the arguments I have caused over the last couple of months. I hope, however bad the argument is, we can put it aside and look at the brighter side of things. I will do my best not to cause any more from now on. I can tell you from my side, however long I have with you, I will never, ever get bored of you. You mean that much to me, and no argument could make me lose interest in you.</p>
+                    <p>The way you're so caring and worry about me, even if it's the smallest scratch or cut... I can't <strong>emphasise</strong> how happy I have been over the last 5 months because of you.</p>
+                    <p>I wake up wanting to talk to you, see your face, and spend time with you. I go to bed seeing your face last thing and feel very sad I can't talk to you any longer. The last couple of months have been the most joyful days of my life, I am not exaggerating.</p>
+                    <p>I am so, so, so sorry for the arguments I have caused over the last couple of months. I hope however bad the argument is, we can put it aside and look at the brighter side of things. I can tell you from my side, however long I have with you, I will never, ever get bored of you. You mean that much to me, and no argument could make me lose interest in you.</p>
                     <p>Once again, thank you for being in my life. You are the best.</p>
                     <p class="letter-ps">
-                        And also please read the letter I gave you if you have time today (sorry about the bad handwriting and what is probably 100s of spelling and grammar mistakes).
+                        P.S. Please read the letter I gave you if you have time today! (lol, sorry about the bad handwriting and what is probably 100s of spelling and grammar mistakes).
                     </p>
                 </div>
             </div>
@@ -240,17 +342,17 @@
         <!-- Slide 10: Video Call Antics -->
         <div class="slide">
             <!-- FILENAME from screenshot -->
-            <img src="IMG_5187.jpeg" alt="Youre Eyes Are SOO Pretty "
+            <img src="IMG_5187.jpeg" alt="Video Call Antics"
                  onerror="this.src='https://placehold.co/600x400/333/fff?text=Error+Loading+Image';">
-            <h3 class="slide-caption">Youre Eyes Are SOO Pretty </h3>
+            <h3 class="slide-caption">Video Call Antics</h3>
         </div>
 
         <!-- Slide 11: Video Call Antics 2 -->
         <div class="slide">
             <!-- FILENAME from screenshot -->
-            <img src="IMG_5167.jpeg" alt="I cant get enough of these "
+            <img src="IMG_5167.jpeg" alt="Video Call Antics"
                  onerror="this.src='https://placehold.co/600x400/333/fff?text=Error+Loading+Image';">
-            <h3 class="slide-caption">I cant get enough of these </h3>
+            <h3 class="slide-caption">Video Call Antics</h3>
         </div>
         
         <!-- Slide 12: NEW IMAGE -->
@@ -259,6 +361,25 @@
             <img src="IMG_5202.jpeg" alt="Sania and Arun"
                  onerror="this.src='https://placehold.co/600x400/333/fff?text=Error+Loading+Image';">
             <!-- No caption for this new one, you can add one! -->
+        </div>
+
+        <!-- Slide 13: Birthday Cake -->
+        <div class="slide" id="cake-slide">
+            <div class="cake-container">
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+                <div class="candles-container">
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                    <div class="candle"><div class="flame"></div></div>
+                </div>
+                <div class="cake-slice" id="cake-slice"></div>
+            </div>
+            <div class="cake-message" id="cake-message-1">Click to blow out the candles...</div>
+            <div class="cake-message" id="cake-message-2">UR THE BEST GIRL FRIEND EVER</div>
         </div>
 
     </div>
@@ -276,7 +397,28 @@
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
 
+            // --- NEW CAKE VARIABLES ---
+            let cakeState = 0; // 0 = lit, 1 = blown out
+            const cakeSlide = document.getElementById('cake-slide');
+            const allFlames = cakeSlide.querySelectorAll('.flame');
+            const cakeSlice = document.getElementById('cake-slice');
+            const cakeMessage1 = document.getElementById('cake-message-1');
+            const cakeMessage2 = document.getElementById('cake-message-2');
+            // --- END NEW CAKE VARIABLES ---
+
+
             function showSlide(index) {
+                // --- NEW CAKE RESET LOGIC ---
+                // Reset cake slide when navigating away
+                cakeState = 0;
+                allFlames.forEach(f => f.style.opacity = '1');
+                cakeSlice.style.display = 'none';
+                cakeMessage1.style.display = 'none';
+                cakeMessage2.style.display = 'none';
+                cakeSlide.removeEventListener('click', handleCakeClick);
+                // --- END NEW CAKE RESET LOGIC ---
+
+
                 // Pause all videos
                 slides.forEach(slide => {
                     const video = slide.querySelector('video');
@@ -297,6 +439,13 @@
                 }
 
                 slides[currentSlide].classList.add('active');
+
+                // --- NEW CAKE CLICK LISTENER ---
+                if (slides[currentSlide].id === 'cake-slide') {
+                    cakeMessage1.style.display = 'block'; // "Click to blow out..."
+                    cakeSlide.addEventListener('click', handleCakeClick);
+                }
+                // --- END NEW CAKE CLICK LISTENER ---
             }
 
             function nextSlide() {
@@ -309,6 +458,29 @@
 
             prevBtn.addEventListener('click', prevSlide);
             nextBtn.addEventListener('click', nextSlide);
+
+            // --- NEW CAKE CLICK FUNCTION ---
+            function handleCakeClick() {
+                switch (cakeState) {
+                    case 0: // Candles are lit
+                        // Blow out candles
+                        allFlames.forEach(f => f.style.opacity = '0');
+                        cakeMessage1.textContent = 'Click again to take a slice!'; // Change text
+                        cakeState = 1;
+                        break;
+                    case 1: // Candles are out
+                        cakeSlice.style.display = 'block'; // Show slice
+                        cakeMessage1.style.display = 'none'; // Hide prompt
+                        cakeMessage2.style.display = 'block'; // Show final message
+                        cakeState = 2;
+                        break;
+                    case 2: // Finished
+                        // Do nothing
+                        break;
+                }
+            }
+            // --- END NEW CAKE CLICK FUNCTION ---
+
 
             // ----- Animation Logic -----
             const animationContainer = document.getElementById('animation-container');
